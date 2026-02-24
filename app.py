@@ -73,7 +73,7 @@ def main():
         **Pipeline del modelo:** TF-IDF → LSA (TruncatedSVD) → Regresión Logística
         """
     )
-    st.markdown("---")
+    st.divider()
 
     # ── Entrada de texto ──────────────────────────────────────────────────────
     text_input = st.text_area(
@@ -90,7 +90,7 @@ def main():
         classify_btn = st.button("Clasificar", type="primary", use_container_width=True)
     with col2:
         if st.button("Limpiar", use_container_width=True):
-            st.experimental_rerun()
+            st.rerun()
 
     # ── Resultado ─────────────────────────────────────────────────────────────
     if classify_btn:
@@ -105,7 +105,7 @@ def main():
             color = ODS_COLORS.get(ods_num, "#333333")
             prob = result["probabilidad"]
 
-            st.markdown("---")
+            st.divider()
 
             # Resultado principal
             st.markdown(
@@ -147,7 +147,7 @@ def main():
                     )
 
     # ── Pie de página ─────────────────────────────────────────────────────────
-    st.markdown("---")
+    st.divider()
     st.caption(
         "Modelo entrenado con el dataset OSDG Community Dataset (2023) | "
         "Pipeline: TF-IDF + LSA + Regresión Logística"
