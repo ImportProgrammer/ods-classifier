@@ -4,7 +4,7 @@ Aplicación web que clasifica automáticamente textos según los **17 Objetivos 
 
 ## Demo
 
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io)
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://importprogrammer-ods-classifier.streamlit.app/)
 
 ## Pipeline del modelo
 
@@ -12,19 +12,19 @@ Aplicación web que clasifica automáticamente textos según los **17 Objetivos 
 Texto → Preprocesamiento → TF-IDF → TruncatedSVD (LSA) → Regresión Logística → ODS
 ```
 
-| Componente | Detalle |
-|---|---|
-| Vectorización | TF-IDF, bigramas, 20.000 features, sublinear_tf |
-| Reducción de dimensionalidad | TruncatedSVD — 300 componentes (LSA) |
-| Clasificador | Logistic Regression multinomial |
-| Optimización | GridSearchCV, 5-fold CV, métrica F1 Macro |
+| Componente                   | Detalle                                         |
+| ---------------------------- | ----------------------------------------------- |
+| Vectorización                | TF-IDF, bigramas, 20.000 features, sublinear_tf |
+| Reducción de dimensionalidad | TruncatedSVD — 300 componentes (LSA)            |
+| Clasificador                 | Logistic Regression multinomial                 |
+| Optimización                 | GridSearchCV, 5-fold CV, métrica F1 Macro       |
 
 ## Resultados
 
-| Métrica | Valor |
-|---|---|
-| Accuracy | 88.0% |
-| F1 Macro | 85.2% |
+| Métrica     | Valor |
+| ----------- | ----- |
+| Accuracy    | 88.0% |
+| F1 Macro    | 85.2% |
 | F1 Weighted | 87.9% |
 
 Entrenado con el dataset [OSDG Community Dataset 2023](https://osdg.ai) — 9.656 textos en español etiquetados con los ODS 1–16.
