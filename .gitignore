@@ -1,0 +1,22 @@
+# Entorno virtual y caché
+.venv/
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Claude
+.claude/
+
+# Configuración de uv (no necesaria en Streamlit Cloud)
+pyproject.toml
+.python-version
+uv.lock
+
+# Datos de entrenamiento (no necesarios en producción)
+data/
+
+# Scripts de entrenamiento y notebook (entregables académicos)
+main.py
+notebook.ipynb
+notebook.html
+Microproyecto2.pdf
