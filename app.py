@@ -7,7 +7,7 @@ Carga el modelo entrenado y permite clasificar texto libre.
 import numpy as np
 import streamlit as st
 import joblib
-from preprocessing import preprocess  # noqa: F401 — necesario para deserializar el modelo
+from preprocessing import preprocess, TextPreprocessor  # noqa: F401 — necesario para deserializar el modelo
 
 ODS_NAMES = {
     1: "Fin de la pobreza",
